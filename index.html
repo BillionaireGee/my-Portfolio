@@ -6,7 +6,8 @@
 
 <!-- Open Graph Meta Tags -->
 <meta property="og:title" content="Gee N. – Web Application Developer & Aspiring Computer Engineer" />
-<meta name="image" property="og:image" content="https://billionairegee.github.io/my-Portfolio/og-preview-linkedin.png?v=2"/>
+<meta property="og:description" content="Remote-ready | Web & AI Solutions" />
+<meta property="og:image" content="https://billionairegee.github.io/my-Portfolio/og-preview-linkedin.png?v=2" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="627" />
 <meta property="og:type" content="website" />
@@ -23,12 +24,52 @@
   header { background: #111215; padding: 24px; text-align: center; border-bottom: 2px solid #00bcd4; }
   header h1 { margin: 0; font-size: 2rem; color: #00bcd4; }
   nav a { margin: 0 10px; color: #00bcd4; text-decoration: none; }
-  section { max-width: 1000px; margin: auto; padding: 24px; }
-  h2 { color: #00bcd4; border-bottom: 2px solid #00bcd4; padding-bottom: 6px; }
+  section { max-width: 1000px; margin: auto; padding: 6px; }
+
+  /* Headings - single line with full-width subtle underline */
+  h2 {
+    color: #00bcd4;
+    white-space: nowrap;               /* prevent wrapping */
+    display: block;
+    position: relative;
+    padding-bottom: 6px;
+    margin-bottom: 16px;
+  }
+
+  h2::after {
+    content: "";
+    display: block;
+    height: 1.5px;                     /* thin line */
+    width: 100%;                        /* full width */
+    margin-top: 4px;
+    background: linear-gradient(to right, rgba(0,188,212,0.2), rgba(0,188,212,0.05));
+    border-radius: 2px;
+  }
+
   .skills span { display: inline-block; background: #00bcd4; color: #0e0e10; padding: 6px 12px; margin: 6px; border-radius: 6px; font-weight: 700; }
   footer { background: #111215; text-align: center; padding: 12px; border-top: 2px solid #00bcd4; }
-  .project { margin-bottom: 14px; }
-  a { color: #00bcd4; }
+
+  /* Subtle link hover effect */
+  a {
+    color: #00bcd4;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  a:hover { color: #00e0ff; }
+
+  /* Project card style with soft hover effect */
+  .project {
+    margin-bottom: 16px;
+    border-left: 3px solid #00bcd4;
+    background: #111215;
+    padding: 12px;
+    border-radius: 6px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .project:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 188, 212, 0.2);
+  }
 </style>
 </head>
 <body>
@@ -41,7 +82,7 @@
 </header>
 
 <section id="about">
-  <h2>About Me</h2>
+  <h2>Professional Summary</h2>
   <p>
     A highly motivated web application developer with 5+ years of experience building scalable web solutions.
     Holds a Postgraduate Diploma in Computer Science. Experienced in both team-based and independent projects.
@@ -50,129 +91,154 @@
 </section>
 
 <section id="skills">
-  <h2>Technical Skills:</h2>
+  <h2>Technical Skills</h2>
   <div class="skills">
     <strong>Frontend:</strong> HTML, CSS, JavaScript<br>
     <strong>Backend:</strong> PHP, Laravel, Python, Flask<br>
-    <strong>Databases:</strong> MySQL, PostgreSQL, MongoDB<br>  
+    <strong>Databases:</strong> MySQL, Sqlite, PostgreSQL, MongoDB<br>  
     <strong>Virtualization & Containerization:</strong> Docker, Kubernetes<br>
     <strong>Cloud & Infrastructure:</strong> Google Cloud Platform (GKE), AWS (S3), Apache Server<br>
     <strong>API Tools & Documentation:</strong> Postman<br>
     <strong>Version Control:</strong> Git<br>
-  
   </div>
 </section>
 
 <section id="projects">
-<h2>Projects</h2>
-<ul style="list-style-type: disc; padding-left: 20px;">
+  <h2>Select Projects</h2>
+  <ul style="list-style-type: none; padding-left: 0;">
 
-  <li class="project">
-    <strong>Facial Recognition Web Application with Anti-Spoofing</strong>
-    <ul>
-      <li><strong>Tech Stack:</strong> Python, Flask, OpenCV, Dlib, Docker, GKE, CI/CD</li>
-      <li><strong>Key Features:</strong>
-        <ul>
-          <li>Full-stack facial recognition with eye-blink anti-spoofing.</li>
-          <li>Containerized with Docker, ensuring portability and consistency across environments.</li>
-          <li>Deployed on GKE with load balancing and external IP exposure for public accessibility.</li>
-          <li>Implemented CI/CD pipelines using GitHub Actions for automated builds, DockerHub push, and rolling updates on GKE.</li>
-          <li>Managed Google Cloud IAM permissions and service accounts for secure deployment.</li>
-          <li>Secure login/logout with facial match and liveliness verification.</li>
-          <li>Clean, responsive front-end UI for a seamless user experience.</li>
-        </ul>
-      </li>
-      <li><strong>Impact:</strong>
-        <ul>
-          <li>Enhanced biometric authentication reliability.</li>
-          <li>Minimized unauthorized access risks.</li>
-          <li>Delivered a secure and user-friendly experience.</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
+    <li class="project">
+      <strong>🧑‍💻 Facial Recognition Web Application with Anti-Spoofing</strong>
+      <ul>
+        <li><strong>Tech Stack:</strong> Python, Flask, OpenCV, Dlib, Docker, GKE, CI/CD</li>
+        <li><strong>Key Features:</strong>
+          <ul>
+            <li>Full-stack facial recognition with eye-blink anti-spoofing.</li>
+            <li>Containerized with Docker, ensuring portability and consistency across environments.</li>
+            <li>Deployed on GKE with load balancing and external IP exposure for public accessibility.</li>
+            <li>Implemented CI/CD pipelines using GitHub Actions for automated builds, DockerHub push, and rolling updates on GKE.</li>
+            <li>Managed Google Cloud IAM permissions and service accounts for secure deployment.</li>
+            <li>Secure login/logout with facial match and liveliness verification.</li>
+            <li>Clean, responsive front-end UI for a seamless user experience.</li>
+          </ul>
+        </li>
+        <li><strong>Impact:</strong>
+          <ul>
+            <li>Enhanced biometric authentication reliability.</li>
+            <li>Minimized unauthorized access risks.</li>
+            <li>Delivered a secure and user-friendly experience.</li>
+          </ul>
+        </li>
+        <li><strong>Live Demo:</strong> <a href="https://34-36-197-114.nip.io/" target="_blank">View Project</a></li>
+      </ul>
+    </li>
 
-  <li class="project">
-    <strong>Donation Tracking System for NGO</strong>
-    <ul>
-      <li><strong>Tech Stack:</strong> PHP, MySQL, HTML/CSS, JavaScript, DomPDF</li>
-      <li>Web-based system to track ₦10M+ in monthly donations securely and efficiently.</li>
-      <li>Integrated PayPal for seamless online donations, ensuring reliable transaction handling.</li>
-      <li>Developed a comprehensive admin dashboard for real-time alerts, monitoring, and automated PDF monthly reports.</li>
-      <li>Designed responsive front-end UI for smooth experience across devices.</li>
-      <li>Optimized system performance and scalability for high-volume financial transactions.</li>
-      <li>Ensured operational efficiency and future growth readiness using PHP, MySQL, HTML/CSS, and JavaScript.</li>
-    </ul>
-  </li>
 
-  <li class="project">
-    <strong>Meal Ticketing System for Large Organization</strong>
-    <ul>
-      <li><strong>Tech Stack:</strong> PHP, MySQL, HTML/CSS, JavaScript, DomPDF</li>
-      <li>Enhanced food distribution across multiple vendors.</li>
-      <li><strong>Key Features:</strong>
-        <ul>
-          <li>Vendor Shuffling: Daily randomized staff-vendor assignments for fairness.</li>
-          <li>Secure Ticket Verification: Only system-generated ticket IDs validated in admin dashboard.</li>
-          <li>Vendor Reporting: Daily PDF reports tracking meals served and staff usage.</li>
-          <li>PDF Automation: Auto-generated PDFs include staff IDs, ticket IDs, timestamps, and meal counts.</li>
-        </ul>
-      </li>
-      <li><strong>Impact:</strong>
-        <ul>
-          <li>Reduced logistical issues in food distribution.</li>
-          <li>Ensured fair vendor assignment and accountability.</li>
-          <li>Improved transparency and data traceability.</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
+    <li class="project">
+      <strong>💾 Offline Data Capture PWA</strong>
+      <ul>
+        <li><strong>Tech Stack:</strong> HTML, CSS, JavaScript, Service Workers, IndexedDB</li>
+        <li><strong>Role:</strong> Full-stack Developer (Solo Project)</li>
+        <li><strong>Key Features:</strong>
+          <ul>
+            <li>Processes and stores data offline using Service Workers and IndexedDB.</li>
+            <li>Installable on desktop and Android devices for offline-first functionality.</li>
+            <li>Responsive UI for mobile and desktop users.</li>
+            <li>Automatic synchronization when internet connectivity is restored.</li>
+          </ul>
+        </li>
+        <li><strong>Impact:</strong>
+          <ul>
+            <li>Enabled data capture without internet connection.</li>
+            <li>Improved productivity and efficiency for field data collection.</li>
+            <li>Seamless offline and online experience for users.</li>
+          </ul>
+        </li>
+        <li><strong>Live Demo:</strong> <a href="https://billionairegee.github.io/Offline-Data-Capture/" target="_blank">View PWA Project</a></li>
+      </ul>
+    </li>
 
-  <li class="project">
-    <strong>Document Management System</strong>
-    <ul>
-      <li><strong>Tech Stack:</strong> Laravel, MySQL, HTML/CSS, JavaScript</li>
-      <li>Converted paper files into secure digital records for admin department.</li>
-      <li>Enhanced document safety, accessibility, and operational efficiency.</li>
-      <li><strong>Impact:</strong>
-        <ul>
-          <li>Increased efficiency</li>
-          <li>Cost reduction</li>
-          <li>Enhanced security</li>
-          <li>Improved accessibility</li>
-          <li>Audit & compliance ready</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
 
-  <li class="project">
-    <strong>Global Live Streaming Platform</strong>
-    <ul>
-      <li><strong>Tech Stack:</strong> Laravel, MySQL, HTML/CSS, JavaScript</li>
-      <li>Developed a streaming platform leveraging company API to broadcast to millions of users globally.</li>
-      <li>Enabled users to rewatch programs after broadcast, improving engagement.</li>
-      <li>Implemented role-based access controls for content management.</li>
-      <li>Centralized digital workflows, improving operational efficiency.</li>
-      <li><strong>Impact:</strong>
-        <ul>
-          <li>Expanded audience reach</li>
-          <li>Improved user engagement</li>
-          <li>Supported business growth</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
+    <li class="project">
+      <strong>💰 Donation Tracking System for NGO</strong>
+      <ul>
+        <li><strong>Tech Stack:</strong> PHP, MySQL, HTML/CSS, JavaScript, DomPDF</li>
+        <li>Web-based system to track ₦10M+ in monthly donations securely and efficiently.</li>
+        <li>Integrated PayPal for seamless online donations, ensuring reliable transaction handling.</li>
+        <li>Developed a comprehensive admin dashboard for real-time alerts, monitoring, and automated PDF monthly reports.</li>
+        <li>Designed responsive front-end UI for smooth experience across devices.</li>
+        <li>Optimized system performance and scalability for high-volume financial transactions.</li>
+        <li>Ensured operational efficiency and future growth readiness using PHP, MySQL, HTML/CSS, and JavaScript.</li>
+      </ul>
+    </li>
 
-</ul>
+    <li class="project">
+      <strong>🍽️ Meal Ticketing System for Large Organization</strong>
+      <ul>
+        <li><strong>Tech Stack:</strong> PHP, MySQL, HTML/CSS, JavaScript, DomPDF</li>
+        <li>Enhanced food distribution across multiple vendors.</li>
+        <li><strong>Key Features:</strong>
+          <ul>
+            <li>Vendor Shuffling: Daily randomized staff-vendor assignments for fairness.</li>
+            <li>Secure Ticket Verification: Only system-generated ticket IDs validated in admin dashboard.</li>
+            <li>Vendor Reporting: Daily PDF reports tracking meals served and staff usage.</li>
+            <li>PDF Automation: Auto-generated PDFs include staff IDs, ticket IDs, timestamps, and meal counts.</li>
+          </ul>
+        </li>
+        <li><strong>Impact:</strong>
+          <ul>
+            <li>Reduced logistical issues in food distribution.</li>
+            <li>Ensured fair vendor assignment and accountability.</li>
+            <li>Improved transparency and data traceability.</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li class="project">
+      <strong>📄 Document Management System</strong>
+      <ul>
+        <li><strong>Tech Stack:</strong> Laravel, MySQL, HTML/CSS, JavaScript</li>
+        <li>Converted paper files into secure digital records for admin department.</li>
+        <li>Enhanced document safety, accessibility, and operational efficiency.</li>
+        <li>Implemented role-based access controls to ensure secure and efficient document management.</li>
+        <li><strong>Impact:</strong>
+          <ul>
+            <li>Increased efficiency</li>
+            <li>Cost reduction</li>
+            <li>Enhanced security</li>
+            <li>Improved accessibility</li>
+            <li>Audit & compliance ready</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li class="project">
+      <strong>🌐 Global Live Streaming Platform</strong>
+      <ul>
+        <li><strong>Tech Stack:</strong> Laravel, MySQL, HTML/CSS, JavaScript</li>
+        <li>Developed a streaming platform leveraging company API to broadcast to millions of users globally.</li>
+        <li>Enabled users to rewatch programs after broadcast, improving engagement.</li>
+        <li><strong>Impact:</strong>
+          <ul>
+            <li>Expanded audience reach</li>
+            <li>Improved user engagement</li>
+            <li>Supported business growth</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+
+  </ul>
 </section>
 
 <section id="contact">
   <h2>Contact</h2>
   <p>Email: <a href="mailto:techibabes@gmail.com" target="_blank">techibabes@gmail.com</a></p>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/gee-n-8a2a27103/" target="_blank">See linkedIn profile</a></p>
-  <p>GitHub: <a href="https://github.com/BillionaireGee" target="_blank">See github portfolio</a></p>
-
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/gee-n-8a2a27103/" target="_blank">See LinkedIn profile</a></p>
+  <p>GitHub: <a href="https://github.com/BillionaireGee" target="_blank">See GitHub portfolio</a></p>
 </section>
 
 <footer>
